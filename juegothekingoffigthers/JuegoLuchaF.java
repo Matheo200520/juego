@@ -20,9 +20,9 @@ public class JuegoLuchaF {
         }
 
         if (jugador1.estarVivo()) {
-            System.out.println("\n" + jugador1.getNombre() + " ha ganado la pelea.");
+            System.out.println("\n" + jugador1.getNombre() + " (J1) Ha ganado la pelea.");
         } else {
-            System.out.println("\n" + jugador2.getNombre() + " ha ganado la pelea.");
+            System.out.println("\n" + jugador2.getNombre() + " (J2) Ha ganado la pelea.");
         }
     }
 
@@ -45,7 +45,7 @@ public class JuegoLuchaF {
         System.out.print("Opción: ");
         int opcion1 = scanner.nextInt();
 
-        PersonajeF jugador1 = crearPersonaje(opcion1);
+        PersonajeF jugar1 = crearPersonaje(opcion1);
 
         //Jugador 2
         System.out.println("Selecciona el personaje del jugador 2:");
@@ -55,9 +55,10 @@ public class JuegoLuchaF {
         System.out.print("Opción: ");
         int opcion2 =scanner.nextInt();
 
-        PersonajeF jugador2 = crearPersonaje(opcion2);
-
-        JuegoLuchaF juego = new JuegoLuchaF(jugador1, jugador2);
+        PersonajeF jugar2 = crearPersonaje(opcion2);
+        
+        JuegoLuchaF juego = new JuegoLuchaF(jugar1, jugar2);
+        
         juego.iniciarPelea();
 
         scanner.close();
