@@ -8,7 +8,7 @@ public class Rugal extends PersonajeF {
         Random rand = new Random();
         int daño = rand.nextInt((maxDaño - minDaño) + 1) + minDaño;
         System.out.println(nombre + " lanza 'Genocide Cutter' causando " + daño + " puntos de daño.");
-        oponente.recibirDaño(daño);;
+        oponente.recibirDaño(daño);
     }
 }
 
