@@ -8,6 +8,7 @@ public class Iori extends PersonajeF {
         Random random = new Random();
         int daño = random.nextInt((maxDaño - minDaño) + 1) + minDaño;
         oponente.recibirDaño(daño);
-        System.out.println(nombre + " ataca a " + oponente.getNombre() + " causando " + daño + " puntos de daño.");
+        System.out.println(nombre + " usa 'Shiki Oniyaki' causando " + daño + " puntos de daño.");
+        oponente.recibirDaño(daño);
     }
 }
