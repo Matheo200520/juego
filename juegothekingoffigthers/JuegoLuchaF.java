@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class JuegoLuchaF {
     private PersonajeF jugador1;
     private PersonajeF jugador2;
@@ -31,50 +29,5 @@ public class JuegoLuchaF {
         atacante.ataque(defensor);
         System.out.println("Vida restante de " + defensor.getNombre() + ": " + defensor.getPuntosDeVida() + "\n");
     }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("=== THE KING OF FIGHTERS ===\n");
-
-        // Jugador 1
-        System.out.println("Selecciona el personaje del Jugador 1:");
-        System.out.println("1. Rugal");
-        System.out.println("2. Iori");
-        System.out.println("3. Kyo");
-        System.out.print("Opción: ");
-        int opcion1 = scanner.nextInt();
-
-        PersonajeF jugar1 = crearPersonaje(opcion1);
-
-        //Jugador 2
-        System.out.println("Selecciona el personaje del jugador 2:");
-        System.out.println("1. Rugal");
-        System.out.println("2. Iori");
-        System.out.println("3. Kyo");
-        System.out.print("Opción: ");
-        int opcion2 =scanner.nextInt();
-
-        PersonajeF jugar2 = crearPersonaje(opcion2);
-        
-        JuegoLuchaF juego = new JuegoLuchaF(jugar1, jugar2);
-        
-        juego.iniciarPelea();
-
-        scanner.close();
-
-    }
-    private static PersonajeF crearPersonaje(int opcion) {
-        switch (opcion) {
-            case 1:
-                return new Rugal("Rugal");
-            case 2:
-                return new Iori("Iori");
-            case 3:
-                return new Kyo("Kyo");
-            default:
-                System.out.println("Opción inválida. Se seleccionará Kyo por defecto.");
-                return new Kyo("Kyo");
-        }
-    }
+    
 }
